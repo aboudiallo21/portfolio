@@ -25,21 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!1)59f(h1+404b&u%i328qs4@fp^zeyyn20ked!x&l2lncffuo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# Temporairement activé pour le débogage - à désactiver en production
+DEBUG = True
 
 # Configuration pour Render
 RENDER = os.environ.get('RENDER', 'False') == 'True'
 
 # Configuration des hôtes autorisés
-ALLOWED_HOSTS = [
-    'portfolio-sbo4.onrender.com',
-    'localhost',
-    '127.0.0.1',
-]
-
-# En développement, on peut accepter tous les hôtes si DEBUG est True
-if DEBUG:
-    ALLOWED_HOSTS = ['*']
+# Temporairement autoriser tous les hôtes pour le débogage
+ALLOWED_HOSTS = ['*']
 
 # Configuration pour les fichiers statiques
 STATIC_URL = '/static/'
