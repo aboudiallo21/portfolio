@@ -1,0 +1,398 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio | Mes Compétences{% endblock %}
+
+{% block content %}
+<section id="skills" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4">
+            <span class="relative inline-block">
+                <span class="relative z-10">Mes Compétences</span>
+                <span class="absolute bottom-0 left-0 w-full h-3 bg-blue-500 bg-opacity-30 -z-0" style="bottom: 5px;"></span>
+            </span>
+        </h2>
+        <p class="text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto">
+            Un aperçu de mes compétences techniques et professionnelles acquises au fil de mes expériences et formations.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Compétences Techniques -->
+            <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform transition duration-500 hover:scale-105">
+                <div class="text-center mb-6">
+                    <div class="w-20 h-20 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop-code text-4xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-400">Techniques</h3>
+                    <p class="text-gray-400 mt-2">Compétences en développement et analyse</p>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Python</span>
+                            <span class="text-blue-400 font-medium">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-blue-500 h-2 rounded-full" data-width="90%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">SQL</span>
+                            <span class="text-blue-400 font-medium">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-blue-500 h-2 rounded-full" data-width="88%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Data Analysis</span>
+                            <span class="text-blue-400 font-medium">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-blue-500 h-2 rounded-full" data-width="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Machine Learning</span>
+                            <span class="text-blue-400 font-medium">82%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-blue-500 h-2 rounded-full" data-width="82%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils et Technologies -->
+            <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform transition duration-500 hover:scale-105">
+                <div class="text-center mb-6">
+                    <div class="w-20 h-20 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-4xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-400">Outils</h3>
+                    <p class="text-gray-400 mt-2">Environnements et logiciels maîtrisés</p>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Docker</span>
+                            <span class="text-green-400 font-medium">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-green-500 h-2 rounded-full" data-width="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Git</span>
+                            <span class="text-green-400 font-medium">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-green-500 h-2 rounded-full" data-width="90%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Power BI</span>
+                            <span class="text-green-400 font-medium">82%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-green-500 h-2 rounded-full" data-width="82%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Tableau</span>
+                            <span class="text-green-400 font-medium">78%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-green-500 h-2 rounded-full" data-width="78%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform transition duration-500 hover:scale-105">
+                <div class="text-center mb-6">
+                    <div class="w-20 h-20 bg-purple-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-4xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-400">Langues</h3>
+                    <p class="text-gray-400 mt-2">Maîtrise des langues étrangères</p>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Français</span>
+                            <span class="text-purple-400 font-medium">100%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-purple-500 h-2 rounded-full" data-width="100%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Anglais</span>
+                            <span class="text-purple-400 font-medium">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-purple-500 h-2 rounded-full" data-width="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Arabe</span>
+                            <span class="text-purple-400 font-medium">75%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-purple-500 h-2 rounded-full" data-width="75%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300">Espagnol</span>
+                            <span class="text-purple-400 font-medium">60%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-bar bg-purple-500 h-2 rounded-full" data-width="60%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences Techniques Détaillées -->
+        <div class="mt-20">
+            <h3 class="text-2xl font-bold text-center mb-10 text-blue-400">Compétences Techniques Détaillées</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Langages de Programmation -->
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-blue-900 hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-blue-500 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-blue-400 group-hover:text-blue-300 transition-colors">
+                        <i class="fab fa-python text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">Python</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Avancé</p>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-yellow-900 hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-yellow-500 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-yellow-400 group-hover:text-yellow-300 transition-colors">
+                        <i class="fas fa-database text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">SQL</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">Avancé</p>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-yellow-400 hover:bg-opacity-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-yellow-400 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-yellow-400 group-hover:text-yellow-300 transition-colors">
+                        <i class="fab fa-js text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">JavaScript</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">Intermédiaire</p>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-red-500 hover:bg-opacity-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-red-500 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-red-400 group-hover:text-red-300 transition-colors">
+                        <i class="fab fa-r-project text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">R</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.5s;">Intermédiaire</p>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-blue-600 hover:bg-opacity-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="w-16 h-16 bg-blue-600 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-blue-400 group-hover:text-blue-300 transition-colors">
+                        <i class="fab fa-java text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">Java</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.6s;">Intermédiaire</p>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-6 rounded-xl hover:bg-green-500 hover:bg-opacity-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4 text-green-400 group-hover:text-green-300 transition-colors">
+                        <i class="fab fa-html5 text-3xl"></i>
+                    </div>
+                    <h4 class="text-center font-semibold">HTML5/CSS3</h4>
+                    <p class="text-center text-sm text-gray-400 mt-1 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.7s;">Avancé</p>
+                </div>
+            </div>
+
+            <!-- Frameworks et Bibliothèques -->
+            <h4 class="text-xl font-bold mt-16 mb-6 text-blue-400 border-b border-gray-700 pb-2">Frameworks & Bibliothèques</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-900 hover:bg-opacity-20 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-900 bg-opacity-20 rounded-lg flex items-center justify-center text-blue-400 mr-3">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <span class="font-medium">Pandas</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-orange-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.15s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-orange-500 bg-opacity-10 rounded-lg flex items-center justify-center text-orange-400 mr-3">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="font-medium">TensorFlow</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-yellow-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-yellow-500 bg-opacity-10 rounded-lg flex items-center justify-center text-yellow-400 mr-3">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <span class="font-medium">PyTorch</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-600 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.25s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-600 bg-opacity-10 rounded-lg flex items-center justify-center text-blue-400 mr-3">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="font-medium">Scikit-learn</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-green-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 bg-opacity-10 rounded-lg flex items-center justify-center text-green-400 mr-3">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <span class="font-medium">Django</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-400 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.35s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-400 bg-opacity-10 rounded-lg flex items-center justify-center text-blue-300 mr-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="font-medium">Seaborn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils et Technologies -->
+            <h4 class="text-xl font-bold mt-16 mb-6 text-green-400 border-b border-gray-700 pb-2">Outils & Technologies</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-900 hover:bg-opacity-20 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-900 bg-opacity-20 rounded-lg flex items-center justify-center text-blue-400 mr-3">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <span class="font-medium">Docker</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-orange-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.15s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-orange-500 bg-opacity-10 rounded-lg flex items-center justify-center text-orange-400 mr-3">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <span class="font-medium">Git</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-yellow-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-yellow-500 bg-opacity-10 rounded-lg flex items-center justify-center text-yellow-400 mr-3">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <span class="font-medium">AWS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-600 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.25s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-600 bg-opacity-10 rounded-lg flex items-center justify-center text-blue-400 mr-3">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="font-medium">MongoDB</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-green-500 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 bg-opacity-10 rounded-lg flex items-center justify-center text-green-400 mr-3">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <span class="font-medium">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item group bg-gray-900 p-4 rounded-lg hover:bg-blue-400 hover:bg-opacity-10 transition-all duration-300 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.35s;">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-400 bg-opacity-10 rounded-lg flex items-center justify-center text-blue-300 mr-3">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span class="font-medium">Apache Kafka</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Méthodologies -->
+            <h4 class="text-xl font-bold mt-16 mb-6 text-purple-400 border-b border-gray-700 pb-2 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Méthodologies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-900 p-6 rounded-xl border-l-4 border-blue-500 transform transition duration-300 hover:scale-105 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 bg-opacity-10 rounded-lg flex items-center justify-center text-blue-400 mr-4">
+                            <i class="fas fa-project-diagram text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold">Gestion de Projet</h5>
+                    </div>
+                    <p class="text-gray-400 text-sm opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Méthodes agiles (Scrum, Kanban), gestion des parties prenantes, planification et suivi des projets.</p>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-xl border-l-4 border-green-500 transform transition duration-300 hover:scale-105 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 bg-opacity-10 rounded-lg flex items-center justify-center text-green-400 mr-4">
+                            <i class="fas fa-code-branch text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold">DevOps & CI/CD</h5>
+                    </div>
+                    <p class="text-gray-400 text-sm opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Intégration et déploiement continus, conteneurisation, orchestration, et automatisation des processus.</p>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-xl border-l-4 border-purple-500 transform transition duration-300 hover:scale-105 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 bg-opacity-10 rounded-lg flex items-center justify-center text-purple-400 mr-4">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold">Analyse de Données</h5>
+                    </div>
+                    <p class="text-gray-400 text-sm opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Exploration, nettoyage, analyse statistique et interprétation des données pour en extraire des insights pertinents.</p>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-xl border-l-4 border-yellow-500 transform transition duration-300 hover:scale-105 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-500 bg-opacity-10 rounded-lg flex items-center justify-center text-yellow-400 mr-4">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold">Machine Learning</h5>
+                    </div>
+                    <p class="text-gray-400 text-sm opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Développement et déploiement de modèles prédictifs, évaluation des performances, et amélioration continue.</p>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl mt-16">
+                <div class="container mx-auto px-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-6 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0s;">Prêt à collaborer sur un projet passionnant ?</h3>
+                    <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                        Je suis toujours ouvert aux opportunités de collaboration et aux défis stimulants. N'hésitez pas à me contacter pour discuter de votre projet.
+                    </p>
+                    <a href="{% url 'portfolio:contact' %}" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition duration-300 transform hover:scale-105 opacity-0 animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                        Me Contacter
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

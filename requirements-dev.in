@@ -1,0 +1,22 @@
+# Development dependencies
+-r requirements.in  # Include production dependencies
+
+# Development tools
+ipython>=8.0.0
+pylint-django>=2.5.0
+black>=23.0.0
+isort>=5.10.0
+pytest>=7.0.0
+pytest-django>=4.5.0
+pytest-cov>=4.0.0
+factory-boy>=3.2.0
+model-bakery>=1.10.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Local development
+django-debug-toolbar>=4.0.0
+django-extensions>=3.2.0
+python-dotenv>=1.0.0

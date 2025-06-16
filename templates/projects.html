@@ -1,0 +1,366 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio | Mes Projets{% endblock %}
+
+{% block content %}
+<section id="projects" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4">
+            <span class="relative inline-block">
+                <span class="relative z-10">Mes Projets Récents</span>
+                <span class="absolute bottom-0 left-0 w-full h-3 bg-blue-500 bg-opacity-30 -z-0" style="bottom: 5px;"></span>
+            </span>
+        </h2>
+        <p class="text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto">
+            Découvrez une sélection de mes projets les plus significatifs, allant de l'analyse de données à l'ingénierie des données et au machine learning.
+        </p>
+        
+        <!-- Project 1 -->
+        <div class="project-card mb-16 bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-gradient-to-r from-blue-600 to-purple-600 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <i class="fas fa-music absolute text-9xl -top-10 -right-10 transform rotate-12"></i>
+                        <i class="fas fa-chart-line absolute text-7xl bottom-10 right-10 transform -rotate-12"></i>
+                    </div>
+                    <div class="text-center relative z-10">
+                        <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-music text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Spotify Analytics</h3>
+                        <p class="text-blue-100">Analyse en temps réel des données utilisateurs</p>
+                        <div class="mt-6 flex justify-center space-x-3">
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Kafka</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">IA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-1 bg-blue-500 mr-3"></div>
+                        <span class="text-blue-400 font-semibold text-sm tracking-wider">PROJET ACADÉMIQUE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Analyse des Données Utilisateurs en Temps Réel</h3>
+                    <p class="text-gray-300 mb-6">
+                        Développement d'une application d'analyse en temps réel pour suivre l'activité des utilisateurs sur une plateforme de streaming musical, avec intégration d'une IA de type chatbot pour améliorer l'expérience utilisateur.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-blue-400 mb-3">Fonctionnalités clés :</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                                <span>Analyse en temps réel des habitudes d'écoute</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                                <span>Chatbot intelligent pour les recommandations personnalisées</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                                <span>Tableaux de bord interactifs pour la visualisation des données</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                                <span>Architecture évolutive avec conteneurisation Docker</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition transform hover:scale-105">
+                            <i class="fas fa-eye mr-2"></i> Voir le Projet
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-400 hover:bg-blue-900 rounded-lg transition">
+                            <i class="fas fa-external-link-alt mr-2"></i> Voir la Démo
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-gray-600 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-book-open mr-2"></i> Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card mb-16 bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+            <div class="md:flex flex-row-reverse">
+                <div class="md:w-1/2 bg-gradient-to-r from-green-600 to-teal-500 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <i class="fas fa-leaf absolute text-9xl -top-10 -right-10 transform rotate-12"></i>
+                        <i class="fas fa-tint absolute text-7xl bottom-10 right-10 transform -rotate-12"></i>
+                    </div>
+                    <div class="text-center relative z-10">
+                        <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-leaf text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Suivi Agricole IoT</h3>
+                        <p class="text-green-100">Optimisation des ressources d'irrigation</p>
+                        <div class="mt-6 flex justify-center space-x-3">
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">IoT</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Arduino</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Web App</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-1 bg-green-500 mr-3"></div>
+                        <span class="text-green-400 font-semibold text-sm tracking-wider">PROJET D'INNOVATION</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Surveillance Intelligente des Cultures</h3>
+                    <p class="text-gray-300 mb-6">
+                        Solution web pour surveiller en temps réel les données de capteurs (air, sol, température, images) afin d'optimiser les ressources d'irrigation et la santé des plantes, avec détection d'anomalies et alertes mobiles.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-green-400 mb-3">Réalisations :</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Réduction de 40% de la consommation d'eau grâce à l'optimisation de l'irrigation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Détection précoce des maladies des plantes avec une précision de 92%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Interface utilisateur intuitive pour le suivi en temps réel</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Notifications en temps réel pour les anomalies détectées</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://github.com/aboudiallo21" class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github mr-2"></i> Code Source
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-green-500 text-green-400 hover:bg-green-900 rounded-lg transition">
+                            <i class="fas fa-external-link-alt mr-2"></i> Voir la Démo
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-gray-600 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-book-open mr-2"></i> Étude de Cas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card mb-16 bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-gradient-to-r from-purple-600 to-pink-600 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <i class="fas fa-database absolute text-9xl -top-10 -right-10 transform rotate-12"></i>
+                        <i class="fas fa-chart-pie absolute text-7xl bottom-10 right-10 transform -rotate-12"></i>
+                    </div>
+                    <div class="text-center relative z-10">
+                        <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-database text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Datawarehouse d'Entreprise</h3>
+                        <p class="text-purple-100">Solution décisionnelle avancée</p>
+                        <div class="mt-6 flex justify-center space-x-3">
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">SQL Server</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">ETL</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Data Modeling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-1 bg-purple-500 mr-3"></div>
+                        <span class="text-purple-400 font-semibold text-sm tracking-wider">PROJET ENTREPRISE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Plateforme Décisionnelle</h3>
+                    <p class="text-gray-300 mb-6">
+                        Conception et mise en œuvre d'un datawarehouse pour une entreprise, permettant une analyse avancée des données et une meilleure prise de décision à travers des tableaux de bord interactifs et des rapports automatisés.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-purple-400 mb-3">Points forts :</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Modélisation des données selon le schéma en étoile</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Processus ETL optimisé pour des temps de chargement réduits</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Tableaux de bord interactifs avec Power BI</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Automatisation des rapports hebdomadaires et mensuels</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition">
+                            <i class="fas fa-chart-bar mr-2"></i> Voir les Tableaux de Bord
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-purple-500 text-purple-400 hover:bg-purple-900 rounded-lg transition">
+                            <i class="fas fa-file-alt mr-2"></i> Documentation Technique
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card mb-16 bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+            <div class="md:flex flex-row-reverse">
+                <div class="md:w-1/2 bg-gradient-to-r from-red-600 to-orange-500 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <i class="fas fa-chart-bar absolute text-9xl -top-10 -right-10 transform rotate-12"></i>
+                        <i class="fas fa-smoking absolute text-7xl bottom-10 right-10 transform -rotate-12"></i>
+                    </div>
+                    <div class="text-center relative z-10">
+                        <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-chart-bar text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Étude sur le Tabagisme</h3>
+                        <p class="text-red-100">Analyse statistique approfondie</p>
+                        <div class="mt-6 flex justify-center space-x-3">
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">SPSS</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Stata</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Sphinx</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Analyse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-1 bg-red-500 mr-3"></div>
+                        <span class="text-red-400 font-semibold text-sm tracking-wider">RECHERCHE UNIVERSITAIRE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Comportement Tabagique chez les Étudiants</h3>
+                    <p class="text-gray-300 mb-6">
+                        Étude statistique complète sur les habitudes tabagiques des étudiants, incluant la conception du questionnaire, la collecte des données, l'analyse statistique et la rédaction d'un rapport détaillé avec des recommandations.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-red-400 mb-3">Méthodologie :</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-red-400 mt-1 mr-2"></i>
+                                <span>Échantillon de 500+ étudiants interrogés</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-red-400 mt-1 mr-2"></i>
+                                <span>Analyse statistique avancée avec Stata</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-red-400 mt-1 mr-2"></i>
+                                <span>Visualisation des données avec Tableau</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-red-400 mt-1 mr-2"></i>
+                                <span>Recommandations basées sur les données</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition">
+                            <i class="fas fa-file-pdf mr-2"></i> Télécharger l'Étude
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-red-500 text-red-400 hover:bg-red-900 rounded-lg transition">
+                            <i class="fas fa-chart-pie mr-2"></i> Voir les Visualisations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02]">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-gradient-to-r from-yellow-600 to-amber-500 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <i class="fas fa-compact-disc absolute text-9xl -top-10 -right-10 transform rotate-12"></i>
+                        <i class="fas fa-shopping-cart absolute text-7xl bottom-10 right-10 transform -rotate-12"></i>
+                    </div>
+                    <div class="text-center relative z-10">
+                        <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-compact-disc text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Système de Vente</h3>
+                        <p class="text-yellow-100">Gestion commerciale de CD musicaux</p>
+                        <div class="mt-6 flex justify-center space-x-3">
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Merise</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">UML</span>
+                            <span class="bg-white bg-opacity-10 text-white text-xs px-3 py-1 rounded-full">Looping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-1 bg-yellow-500 mr-3"></div>
+                        <span class="text-yellow-400 font-semibold text-sm tracking-wider">PROJET ACADÉMIQUE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gestion de Vente de CDs Musicaux</h3>
+                    <p class="text-gray-300 mb-6">
+                        Conception et implémentation complète d'un système de gestion des ventes pour un magasin de disques, incluant la modélisation des données, la création de la base de données et le développement des requêtes SQL nécessaires.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-yellow-400 mb-3">Fonctionnalités :</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                                <span>Gestion complète du catalogue de CDs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                                <span>Suivi des ventes et des stocks en temps réel</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                                <span>Gestion des clients et des commandes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                                <span>Rapports et statistiques de vente</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://github.com/aboudiallo21" class="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github mr-2"></i> Code Source
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-yellow-500 text-yellow-400 hover:bg-yellow-900 rounded-lg transition">
+                            <i class="fas fa-database mr-2"></i> Schéma de la Base
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-gray-600 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-book-open mr-2"></i> Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Intéressé par une collaboration ?</h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Je suis toujours ouvert à discuter de nouveaux projets, d'opportunités créatives ou de partenariats.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="{% url 'portfolio:contact' %}" class="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition transform hover:scale-105">
+                <i class="fas fa-paper-plane mr-2"></i> Discutons de Votre Projet
+            </a>
+            <a href="CV_DIALLO_ab.pdf" download class="bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-full font-semibold transition transform hover:scale-105 inline-flex items-center justify-center">
+                <i class="fas fa-download mr-2"></i> Télécharger mon CV
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

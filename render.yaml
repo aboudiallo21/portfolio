@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: portfolio-django
+    env: python
+    region: frankfurt  # Région la plus proche de votre public cible
+    plan: free  # Commencez par le plan gratuit, puis passez à 'standard' pour la production
+    
+    # Configuration du build et du démarrage
+    buildCommand: "./render-build.sh"
+    startCommand: "gunicorn portfolio_django.wsgi:application --log-file -"
+    
+    # Variables d'environnement
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
+      - key: PYTHONUNBUFFERED
+        value: "True"
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio_django.settings
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: DISABLE_COLLECTSTATIC
+        value: "0"
+    
+    # Configuration du déploiement
+    autoDeploy: true
+    numInstances: 1
+    
+    # Configuration du health check
+    healthCheckPath: /
+    healthCheckTimeout: 10
+    
+    # Configuration des logs
+    logRetentionDays: 7
+    
+    # Configuration du réseau
+    public: true
+    
+    # Configuration du stockage (optionnel - à décommenter si nécessaire)
+    # disk:
+    #   name: portfolio-storage
+    #   mountPath: /app/media
+    #   sizeGB: 1

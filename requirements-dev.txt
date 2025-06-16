@@ -1,0 +1,101 @@
+#
+# Ce fichier est généré automatiquement à partir de requirements-dev.in
+# Pour mettre à jour ce fichier, modifiez requirements-dev.in et exécutez :
+# pip-compile --output-file=requirements-dev.txt requirements-dev.in
+#
+
+# Production dependencies from file: requirements.in
+asgiref==3.8.1
+dj-database-url==2.1.0
+Django==4.2.10
+gunicorn==21.2.0
+psycopg2-binary==2.9.9
+sqlparse==0.5.0
+typing-extensions==4.12.2
+whitenoise==6.6.0
+
+# Development tools
+black==24.4.2
+    # via -r requirements-dev.in
+click==8.1.7
+    # via black
+factory-boy==3.3.0
+    # via -r requirements-dev.in
+faker==25.0.0
+    # via
+    #   -r requirements-dev.in
+    #   factory-boy
+iniconfig==2.0.0
+    # via pytest
+ipython==8.26.0
+    # via -r requirements-dev.in
+isort==5.13.2
+    # via -r requirements-dev.in
+jedi==0.19.1
+    # via ipython
+markupsafe==2.1.5
+    # via jinja2
+mccabe==0.7.0
+    # via pylint
+model-bakery==1.14.0
+    # via -r requirements-dev.in
+mypy-extensions==1.0.0
+    # via black
+packaging==24.0
+    # via
+    #   pytest
+    #   pytest-cov
+parso==0.8.3
+    # via jedi
+pathspec==0.12.1
+    # via black
+platformdirs==4.2.0
+    # via black
+pluggy==1.5.0
+    # via pytest
+pylint-django==2.5.5
+    # via -r requirements-dev.in
+pylint==3.1.0
+    # via
+    #   -r requirements-dev.in
+    #   pylint-django
+pytest-cov==5.0.0
+    # via -r requirements-dev.in
+pytest-django==4.8.0
+    # via -r requirements-dev.in
+pytest==8.2.0
+    # via
+    #   -r requirements-dev.in
+    #   pytest-cov
+    #   pytest-django
+six==1.16.0
+    # via python-dateutil
+sqlparse==0.5.0
+    # via Django
+tomli==2.0.1
+    # via pytest
+tomlkit==0.12.0
+    # via pylint
+typing-extensions==4.12.2
+    # via
+    #   black
+    #   pylint
+
+# Documentation
+sphinx-rtd-theme==2.0.0
+    # via -r requirements-dev.in
+sphinx==7.3.7
+    # via
+    #   -r requirements-dev.in
+    #   sphinx-rtd-theme
+
+# Local development
+django-debug-toolbar==4.3.0
+    # via -r requirements-dev.in
+django-extensions==3.2.3
+    # via -r requirements-dev.in
+python-dotenv==1.0.1
+    # via -r requirements-dev.in
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio | Data Engineer & Statisticien{% endblock %}</title>
+    <meta name="description" content="Portfolio professionnel d'un Data Engineer et Statisticien passionné par l'analyse de données et l'IA.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-400">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="{% url 'portfolio:home' %}" class="nav-link hover:text-blue-400 transition relative group">
+                        Accueil
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="{% url 'portfolio:home' %}#about" class="nav-link hover:text-blue-400 transition relative group">
+                        À propos
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="{% url 'portfolio:skills' %}" class="nav-link hover:text-blue-400 transition relative group">
+                        Compétences
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="{% url 'portfolio:experience' %}" class="nav-link hover:text-blue-400 transition relative group">
+                        Expérience
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="{% url 'portfolio:projects' %}" class="nav-link hover:text-blue-400 transition relative group">
+                        Projets
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="{% url 'portfolio:contact' %}" class="nav-link hover:text-blue-400 transition relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white hover:text-blue-400 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 pt-20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-col space-y-6">
+                <a href="{% url 'portfolio:home' %}" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-home mr-3 w-6 text-center"></i> Accueil
+                </a>
+                <a href="{% url 'portfolio:home' %}#about" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-user mr-3 w-6 text-center"></i> À propos
+                </a>
+                <a href="{% url 'portfolio:skills' %}" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-code mr-3 w-6 text-center"></i> Compétences
+                </a>
+                <a href="{% url 'portfolio:experience' %}" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-briefcase mr-3 w-6 text-center"></i> Expérience
+                </a>
+                <a href="{% url 'portfolio:projects' %}" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-project-diagram mr-3 w-6 text-center"></i> Projets
+                </a>
+                <a href="{% url 'portfolio:contact' %}" class="nav-link-mobile block text-xl text-gray-300 hover:text-blue-400 py-3 px-4 rounded-lg transition-colors duration-300 bg-blue-600 bg-opacity-10 hover:bg-opacity-20">
+                    <i class="fas fa-envelope mr-3 w-6 text-center"></i> Contact
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Messages -->
+        <div class="container mx-auto px-6">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="mb-4 p-4 rounded-lg {% if message.tags == 'error' %}bg-red-900 text-red-100{% else %}bg-green-900 text-green-100{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 hover:scale-110 focus:outline-none z-40 opacity-0 invisible">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- À propos -->
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">À propos</h3>
+                    <p class="text-gray-400 mb-4">
+                        Data Engineer & Statisticien passionné par l'IA, le Machine Learning et l'analyse de données.
+                        Je transforme les données en informations exploitables pour des décisions stratégiques.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/aboudiallo21" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/diallo-abou-122038231/" class="text-gray-400 hover:text-blue-600 transition-colors duration-300" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{% url 'portfolio:home' %}" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Accueil</a></li>
+                        <li><a href="{% url 'portfolio:home' %}#about" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">À propos</a></li>
+                        <li><a href="{% url 'portfolio:skills' %}" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Compétences</a></li>
+                        <li><a href="{% url 'portfolio:experience' %}" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Expérience</a></li>
+                        <li><a href="{% url 'portfolio:projects' %}" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Projets</a></li>
+                        <li><a href="{% url 'portfolio:contact' %}" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">dabou0110@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">+33 7 73 61 19 63</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Rennes, France</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright et mentions légales -->
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; {% now "Y" %} DIALLO Abou. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300">Mentions légales</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300">Plan du site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/navigation.js' %}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

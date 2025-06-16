@@ -1,0 +1,168 @@
+/* Animations de fond */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Styles des éléments de l'IA */
+.ai-node {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.2);
+    animation: pulse 4s infinite ease-in-out;
+}
+
+.data-connection {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+    transform-origin: left center;
+    animation: pulse 3s infinite;
+}
+
+/* Carte de projet interactive */
+.project-card {
+    background: rgba(31, 41, 55, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Animation des compétences */
+.skill-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: width 1.5s ease-in-out;
+}
+
+/* Effet de survol pour les liens */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Animation du texte IA qui saute */
+@keyframes jumping-ia {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translate(-50%, -150%) scale(1.2) rotate(10deg);
+        opacity: 0.9;
+    }
+    50% { 
+        transform: translate(-50%, -200%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    75% { 
+        transform: translate(-50%, -150%) scale(0.8) rotate(-10deg);
+        opacity: 0.9;
+    }
+}
+
+.animate-jumping-ia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: jumping-ia 2s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.7);
+    z-index: 5;
+}
+
+/* Animation du titre */
+.typing-effect {
+    border-right: 3px solid #3b82f6;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3b82f6; }
+}
+
+/* Réseau de neurones animé */
+.neural-network {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 2rem 0;
+}
+
+.neuron {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.connection {
+    position: absolute;
+    height: 2px;
+    background: rgba(59, 130, 246, 0.5);
+    transform-origin: left center;
+    z-index: -1;
+}
